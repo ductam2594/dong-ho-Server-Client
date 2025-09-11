@@ -20,5 +20,23 @@
 </div>
 
 ---
+
+## Mục lục
+- [1. Giới thiệu hệ thống](#1-giới-thiệu-hệ-thống)
+- [2. Ngôn ngữ & Công nghệ chính](#2-ngôn-ngữ--công-nghệ-chính)
+- [3. Hình ảnh các chức năng](#3-hình-ảnh-các-chức-năng)
+- [4. Kiến trúc & Cấu trúc mã nguồn](#4-kiến-trúc--cấu-trúc-mã-nguồn)
+- [5. Cơ sở dữ liệu](#5-cơ-sở-dữ-liệu)
+- [6. Giao thức & Lệnh server](#6-giao-thức--lệnh-server)
+- [7. Phân quyền](#7-phân-quyền)
+- [8. Các bước cài đặt](#8-các-bước-cài-đặt)
+- [9. Hướng dẫn sử dụng nhanh](#9-hướng-dẫn-sử-dụng-nhanh)
+- [10. Khắc phục sự cố](#10-khắc-phục-sự-cố)
+- [11. Ghi chú triển khai & bảo mật](#11-ghi-chú-triển-khai--bảo-mật)
+- [12. Tài khoản mẫu](#12-tài-khoản-mẫu)
+- [13. Đóng góp](#13-đóng-góp)
+
+---
+
 # dong-ho-Server-Client
 Đồng hồ Server – Client (đồng bộ thời gian)
