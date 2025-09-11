@@ -19,8 +19,6 @@
 
 </div>
 
----
-
 ## Mục lục
 - [1. Giới thiệu hệ thống](#1-giới-thiệu-hệ-thống)
 - [2. Ngôn ngữ & Công nghệ chính](#2-ngôn-ngữ--công-nghệ-chính)
@@ -36,13 +34,11 @@
 - [12. Tài khoản mẫu](#12-tài-khoản-mẫu)
 - [13. Đóng góp](#13-đóng-góp)
 
----
+
 # Hệ thống Đồng bộ Thời gian (Server – Client)
 
 Ứng dụng Java Swing mô phỏng việc **đồng bộ thời gian** giữa **Server** và **Client** thông qua giao thức TCP Socket.  
 Hệ thống gồm 2 chương trình: **Time Server** và **Time Client**, kèm các tiện ích hỗ trợ.
-
----
 
 ## 1. Giới thiệu hệ thống
 
