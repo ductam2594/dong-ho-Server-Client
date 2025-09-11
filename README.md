@@ -19,71 +19,37 @@
 
 </div>
 
-# ⏰ Ứng dụng Đồng hồ Server – Client (Đồng bộ thời gian)
+# ⏰ Hệ Thống Đồng Bộ Thời Gian Server – Client  
 
-## 1. Giới thiệu hệ thống
-Hệ thống **Đồng hồ Server – Client** cho phép nhiều máy Client đồng bộ thời gian với Server thông qua **TCP Socket**.  
-- **Server**: quản lý, hiển thị đồng hồ thời gian thực, trả lời yêu cầu đồng bộ từ Client.  
-- **Client**: hiển thị đồng hồ cá nhân, có thể đồng bộ thủ công hoặc tự động với Server.  
-- **Log**: mọi hoạt động đồng bộ được ghi vào file (server_log.txt, client_log.txt).  
+## 📌 1. Giới thiệu hệ thống  
+Hệ thống đồng bộ thời gian **Server – Client** được xây dựng nhằm mục đích:  
+- 🖥️ Đồng bộ thời gian giữa các máy tính trong mạng LAN.  
+- 📡 Server giữ vai trò cung cấp **thời gian chuẩn** cho toàn bộ Client.  
+- 🔄 Client gửi yêu cầu đồng bộ → Server phản hồi → Client cập nhật thời gian và lưu **log (ngày/tháng/năm + giờ)** vào file.  
 
----
-
-## 2. Ngôn ngữ & Công nghệ chính
-- **Java SE 8+**  
-- **Java Swing** (giao diện người dùng)  
-- **TCP Socket** (ServerSocket, Socket)  
-- **Đa luồng**: xử lý nhiều client kết nối đồng thời.  
-- **File I/O**: lưu log đồng bộ vào file.  
+✅ Ứng dụng phù hợp cho học tập, nghiên cứu về **Java Socket, TCP/IP và đồng bộ hệ thống**.  
 
 ---
 
-## 3. Hình ảnh các chức năng
-### Server GUI
-- Hiển thị đồng hồ thời gian thực.  
-- Danh sách client kết nối.  
-- Nút Start/Stop server.  
-
-![Server](https://via.placeholder.com/600x300.png?text=Server+GUI)
-
-### Client GUI
-- Hiển thị đồng hồ cá nhân.  
-- Nhập IP server để kết nối.  
-- Nút đồng bộ, tùy chọn tự động 30s.  
-
-![Client](https://via.placeholder.com/600x300.png?text=Client+GUI)
+## ⚙️ 2. Công nghệ sử dụng  
+- ☕ **Ngôn ngữ:** Java  
+- 🌐 **Giao thức truyền thông:** TCP Socket  
+- 🛠️ **IDE:** Eclipse / IntelliJ IDEA  
+- 📂 **Quản lý phiên bản:** Git + GitHub  
 
 ---
 
-## 4. Kiến trúc & Cấu trúc mã nguồn
+## 🖼️ 3. Hình ảnh các chức năng  
+*(Chèn hình ảnh minh họa tại đây)*  
 
-**Luồng hoạt động:**
-1. Client kết nối tới Server qua cổng 5000 (TCP).  
-2. Client gửi lệnh `"TIME"`.  
-3. Server trả về thời gian hiện tại.  
-4. Cả Server và Client ghi log vào file.  
+Ví dụ:  
+- 📡 **Server:** Hiển thị danh sách client kết nối và thời gian chuẩn.  
+- ⏱️ **Client:** Hiển thị kết quả đồng bộ thành công.  
 
----
+## 🚀 4. Các bước cài đặt  
 
-## 5. Cơ sở dữ liệu
-Hệ thống sử dụng **file text** để lưu log:  
-- `server_log.txt`: lưu hoạt động đồng bộ phía server.  
-- `client_log.txt`: lưu hoạt động đồng bộ phía client.  
+## 📬 5. Thông tin liên hệ
 
-Ví dụ log:  
-
----
-
-## 6. Giao thức & Lệnh server
-- **Giao thức**: TCP (Transmission Control Protocol).  
-- **Cổng mặc định**: `5000`.  
-- **Lệnh hỗ trợ**:  
-  - `TIME` → Client gửi để yêu cầu đồng bộ.  
-  - Server trả về chuỗi thời gian dạng `HH:mm:ss`.  
-
----
-
-## 📖 Ý nghĩa
-- Giúp sinh viên hiểu rõ cơ chế **Client-Server** trong lập trình mạng.  
-- Thực hành kết hợp **Socket + GUI + File I/O**.  
-- Ứng dụng có thể mở rộng để đồng bộ nhiều loại dữ liệu khác, không chỉ thời gian.
+👤 Tác giả: Nguyễn Đức Tâm
+📧 Email: your-email@example.com
+🌐 GitHub: github.com/your-username
