@@ -37,6 +37,23 @@
 - [13. Đóng góp](#13-đóng-góp)
 
 ---
+# Hệ thống Đồng bộ Thời gian (Server – Client)
 
-# dong-ho-Server-Client
-Đồng hồ Server – Client (đồng bộ thời gian)
+Ứng dụng Java Swing mô phỏng việc **đồng bộ thời gian** giữa **Server** và **Client** thông qua giao thức TCP Socket.  
+Hệ thống gồm 2 chương trình: **Time Server** và **Time Client**, kèm các tiện ích hỗ trợ.
+
+---
+
+## 1. Giới thiệu hệ thống
+
+- **Time Server**: chạy trên một máy chủ, lắng nghe tại cổng `5000`. Khi nhận được yêu cầu `"TIME"` từ client, server sẽ trả về thời gian hiện tại của hệ thống.
+- **Time Client**: chạy trên máy người dùng, cho phép:
+  - Hiển thị giờ cục bộ.
+  - Kết nối tới server thông qua địa chỉ IP.
+  - Đồng bộ thời gian thủ công hoặc tự động (mỗi 30 giây).
+- **Log**: mọi hoạt động đồng bộ được ghi lại trong file (`server_log.txt`, `client_log.txt`).
+
+---
+
+## 2. Ngôn ngữ & Công nghệ chính
+
