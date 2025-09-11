@@ -48,7 +48,8 @@ Client kết nối tới Server để lấy thời gian và đồng bộ đồng
 
 Hệ thống đồng thời ghi log hoạt động vào file lưu trữ trên Server
 
-## Mục tiêu
+ mục tiêu
+ 
 - Minh họa cơ chế trao đổi dữ liệu qua mạng  
 - Quản lý nhiều kết nối  
 - Đồng bộ dữ liệu  
