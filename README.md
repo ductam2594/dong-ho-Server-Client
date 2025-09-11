@@ -35,25 +35,73 @@
 - [13. Đóng góp](#13-đóng-góp)
 
 
-# Hệ thống Đồng bộ Thời gian (Server – Client)
+# ⏰ Ứng dụng Đồng hồ Server – Client (Đồng bộ thời gian)
 
-Ứng dụng Java Swing mô phỏng việc **đồng bộ thời gian** giữa **Server** và **Client** thông qua giao thức TCP Socket.  
-Hệ thống gồm 2 chương trình: **Time Server** và **Time Client**, kèm các tiện ích hỗ trợ.
+---
 
 ## 1. Giới thiệu hệ thống
+Hệ thống **Đồng hồ Server – Client** cho phép nhiều máy Client đồng bộ thời gian với Server thông qua **TCP Socket**.  
+- **Server**: quản lý, hiển thị đồng hồ thời gian thực, trả lời yêu cầu đồng bộ từ Client.  
+- **Client**: hiển thị đồng hồ cá nhân, có thể đồng bộ thủ công hoặc tự động với Server.  
+- **Log**: mọi hoạt động đồng bộ được ghi vào file (server_log.txt, client_log.txt).  
 
-Server đóng vai trò cung cấp thời gian chuẩn, tiếp nhận kết nối và phản hồi yêu cầu từ nhiều Client.  
-
-Client kết nối tới Server để lấy thời gian và đồng bộ đồng hồ cục bộ.  
-
-Hệ thống đồng thời ghi log hoạt động vào file lưu trữ trên Server
-
- mục tiêu
- 
-- Minh họa cơ chế trao đổi dữ liệu qua mạng  
-- Quản lý nhiều kết nối  
-- Đồng bộ dữ liệu  
-- Ghi nhận log  
+---
 
 ## 2. Ngôn ngữ & Công nghệ chính
+- **Java SE 8+**  
+- **Java Swing** (giao diện người dùng)  
+- **TCP Socket** (ServerSocket, Socket)  
+- **Đa luồng**: xử lý nhiều client kết nối đồng thời.  
+- **File I/O**: lưu log đồng bộ vào file.  
 
+---
+
+## 3. Hình ảnh các chức năng
+### Server GUI
+- Hiển thị đồng hồ thời gian thực.  
+- Danh sách client kết nối.  
+- Nút Start/Stop server.  
+
+![Server](https://via.placeholder.com/600x300.png?text=Server+GUI)
+
+### Client GUI
+- Hiển thị đồng hồ cá nhân.  
+- Nhập IP server để kết nối.  
+- Nút đồng bộ, tùy chọn tự động 30s.  
+
+![Client](https://via.placeholder.com/600x300.png?text=Client+GUI)
+
+---
+
+## 4. Kiến trúc & Cấu trúc mã nguồn
+
+**Luồng hoạt động:**
+1. Client kết nối tới Server qua cổng 5000 (TCP).  
+2. Client gửi lệnh `"TIME"`.  
+3. Server trả về thời gian hiện tại.  
+4. Cả Server và Client ghi log vào file.  
+
+---
+
+## 5. Cơ sở dữ liệu
+Hệ thống sử dụng **file text** để lưu log:  
+- `server_log.txt`: lưu hoạt động đồng bộ phía server.  
+- `client_log.txt`: lưu hoạt động đồng bộ phía client.  
+
+Ví dụ log:  
+
+---
+
+## 6. Giao thức & Lệnh server
+- **Giao thức**: TCP (Transmission Control Protocol).  
+- **Cổng mặc định**: `5000`.  
+- **Lệnh hỗ trợ**:  
+  - `TIME` → Client gửi để yêu cầu đồng bộ.  
+  - Server trả về chuỗi thời gian dạng `HH:mm:ss`.  
+
+---
+
+## 📖 Ý nghĩa
+- Giúp sinh viên hiểu rõ cơ chế **Client-Server** trong lập trình mạng.  
+- Thực hành kết hợp **Socket + GUI + File I/O**.  
+- Ứng dụng có thể mở rộng để đồng bộ nhiều loại dữ liệu khác, không chỉ thời gian.
