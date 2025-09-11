@@ -42,14 +42,17 @@ Hệ thống gồm 2 chương trình: **Time Server** và **Time Client**, kèm 
 
 ## 1. Giới thiệu hệ thống
 
-- **Time Server**: chạy trên một máy chủ, lắng nghe tại cổng `5000`. Khi nhận được yêu cầu `"TIME"` từ client, server sẽ trả về thời gian hiện tại của hệ thống.
-- **Time Client**: chạy trên máy người dùng, cho phép:
-  - Hiển thị giờ cục bộ.
-  - Kết nối tới server thông qua địa chỉ IP.
-  - Đồng bộ thời gian thủ công hoặc tự động (mỗi 30 giây).
-- **Log**: mọi hoạt động đồng bộ được ghi lại trong file (`server_log.txt`, `client_log.txt`).
+Server đóng vai trò cung cấp thời gian chuẩn, tiếp nhận kết nối và phản hồi yêu cầu từ nhiều Client.  
 
----
+Client kết nối tới Server để lấy thời gian và đồng bộ đồng hồ cục bộ.  
+
+Hệ thống đồng thời ghi log hoạt động vào file lưu trữ trên Server
+
+## Mục tiêu
+- Minh họa cơ chế trao đổi dữ liệu qua mạng  
+- Quản lý nhiều kết nối  
+- Đồng bộ dữ liệu  
+- Ghi nhận log  
 
 ## 2. Ngôn ngữ & Công nghệ chính
 
