@@ -51,5 +51,4 @@ Ví dụ:
 ## 📬 5. Thông tin liên hệ
 
 👤 Tác giả: Nguyễn Đức Tâm
-📧 Email: your-email@example.com
-🌐 GitHub: github.com/your-username
+📧 Email: tamn96911@gmail.com
