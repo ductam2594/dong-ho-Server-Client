@@ -68,7 +68,7 @@ Dưới đây là một số giao diện chính của hệ thống:
 
 ---
 
-### 💻 Giao diện Client và chức nawnng đếm ngược
+### 💻 Giao diện Client và chức năng đếm ngược
 - Hiển thị thời gian thực được đồng bộ từ Server.  
 - Cho phép người dùng thiết lập **báo thức** ⏰.  
 - Tích hợp chức năng **bấm giờ** 🕐.  
